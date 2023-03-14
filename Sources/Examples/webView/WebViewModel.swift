@@ -8,13 +8,13 @@
 import Foundation
 import WebKit
 
-
-class WebViewModel: ObservableObject {
+class WebViewModel: NSObject, ObservableObject {
+        
+    let webView = WKWebView()
     
-    let webView: WKWebView
-    
-    init(webView: WKWebView = WKWebView()) {
-        self.webView = webView
+    override init() {
+        super.init()
+        webView.navigationDelegate = self
         Task {
             await loadWebsite()
         }
@@ -23,6 +23,13 @@ class WebViewModel: ObservableObject {
     func loadWebsite() async {
         guard let url = URL(string: "https://mileafy.com") else { return }
         let request = URLRequest(url: url)
-        webView.load(request)
+        await webView.load(request)
     }
 }
+
+extension WebViewModel: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print(navigation)
+    }
+}
+
