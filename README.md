@@ -6,10 +6,8 @@ Wrap a custom UIView for SwiftUI.
 ## Installation
 
 ### Swift Package Manager
+`https://github.com/nevinchanyi/Wrapper.git`
 
-https - `https://github.com/nevinchanyi/Wrapper.git`
-OR
-ssh - `git@github.com:nevinchanyi/Wrapper.git`
 
 
 ## Usage
@@ -84,3 +82,6 @@ extension ContentViewModel: MKMapViewDelegate {
 // TODO: Add link
 ### WKWebView
 // TODO: Add link
+### UITextView
+// TODO: Add link
+
