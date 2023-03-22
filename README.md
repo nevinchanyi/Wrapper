@@ -78,10 +78,4 @@ extension ContentViewModel: MKMapViewDelegate {
 ```
 
 ## Available examples
-### MKMapView
-// TODO: Add link
-### WKWebView
-// TODO: Add link
-### UITextView
-// TODO: Add link
-
+`MKMapView`, `WKWebView`, `UITextView`, `UICalendarView`
