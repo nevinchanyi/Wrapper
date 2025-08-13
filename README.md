@@ -1,6 +1,6 @@
 # Wrapper
 
-Wrap a custom UIView for SwiftUI.
+Wrap a custom UIView or UIViewController in SwiftUI.
 
 
 ## Installation
